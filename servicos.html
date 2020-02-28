@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilo.css">
+    <title>HUB EVENTS</title>
+	
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav id="sidebar">
+        
+            <div class="text-center" style="margin-top: 20px;">
+                <img src="imagens/log-transparente.png" style="width: 200px">
+            </div>
+        
+            <ul style="margin-top:10px;">
+            
+                <li class="active">
+                    <div></div>
+                    <a>Página Inicial</a>
+                </li>
+                
+                <li class="">
+                    <div></div>
+                    <a data-toggle="modal" data-target="#servicoModal"> Cadastrar Serviços</a>
+                </li>
+                
+                <li class="">
+                    <div></div>
+                    <a>Serviços Cadastrados</a>
+                </li>
+                
+                <li class="">
+                    <div></div>
+                    <a>Editar Perfil</a>
+                </li>
+            </ul>
+			
+			<div class="col-md-12">
+				<button class="btn btn-small btn-block">Sair</button>
+			</div>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content" style="width: 100%">
+        
+            <div id="nav">
+                <ul>
+                
+                    <li>
+                        <a href="#home">
+                            <span class="glyphicon glyphicon-menu-hamburger" style="font-size: 24px; color: #fa8529"></span>
+                        </a>
+                    </li>
+
+                    <li style="float: right;">
+                        <a> { nome } </a>
+                    </li>
+                    
+                    <li style="float: right;">
+                        <img src="imagens/unknown_user.jpg">
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-md-12">
+            
+                <h3>Notificação de Contratação de Serviço</h3>
+                
+                <div class="box">
+                    <div class="box-header">
+                        <div>
+                            
+                            <div class="col-md-6">
+                                <h4> Serviço   { nome do Serviço }</h4>
+                            </div>
+                            
+                            <div class="text-right col-md-6">
+                            <h4> Status: Boleto Gerado</h4>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                    
+                        <div>
+                            <h4>Descrição: </h4>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <div>
+                            <h5>Cliente <strong>&lt;name&gt;</strong> gerou um boleto para contratar o serviço</h5>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <div class="text-right"> 
+                            <strong>Número para Contato: </strong>{numero}
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="box">
+                    <div class="box-header">
+                        <div>
+                            
+                            <div class="col-md-6">
+                                <h4> Serviço   { nome do Serviço }</h4>
+                            </div>
+                            
+                            <div class="text-right col-md-6">
+                            <h4> Status: Tem Interesse</h4>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                    
+                        <div>
+                            <h4>Descrição: </h4>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <div>
+                            <h5>Cliente <strong>&lt;name&gt;</strong> tem interesse no seu serviço</h5>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <div class="text-right"> 
+                            <strong>Mande uma mensagem: </strong>{numero}
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </div>     
+
+
+<!-- Modal -->
+<div class="modal fade" id="servicoModal" tabindex="-1" role="dialog" aria-labelledby="servicoModal" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<div class="col-md-8">
+				<div class="form-group">
+					<label>Serviços *</label>
+					<select class="form-control" id="exampleFormControlSelect1">
+					  <option>Animador(a) de festas</option>
+					  <option>Decorador(a) de festas</option>
+					  <option>Confeiteiro(a)</option>
+					  <option>Churrasqueiro(a)</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="col-md-12">
+			
+				<div class="form-group">
+                    <label>Descrição</label>
+                    
+                    <textarea rows="3" cols="80"> 
+
+                    </textarea>
+				</div>
+				
+            </div>
+            
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label> Valor * </label>
+                    <input type="number" >
+                </div>
+            </div>
+            
+			<div class="col-md-6">
+                <div class="form-group">
+                    <label> Forma de Pagamento * </label>
+                    <select class="form-control">
+                        <option value="boleto">Boleto</option><br>
+                        <option value="cartão de crédito">Cartão de Crédito</option>
+                        <option value="cartão de débito">Cartão de Débito</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+
+                <div style="width: 100%; height: 100px; border: 1px solid grey">
+                    
+                    <div style="widows: 100%; height: 25px; background-color: lightgray">
+                        <img>
+                        Fotos
+    
+    
+                    </div>
+
+                    <div style="width: 100%">
+                        <div class="text-center">
+                            <span class="glyphicon glyphicon-cloud-upload"></span>
+                            <h4>Arraste e solte para fazer o upload</h4>
+                        </div>
+                    </div>
+    
+                </div>
+                
+                <div>
+
+                    <div>
+                        <span>Máximo 3 Fotos</span>
+                    </div>
+
+                </div>
+                
+                <div>
+                    <span>Tipos de Arquivos Aceitos: JPG, PNG</span>
+                </div>
+
+                <div class="text-center">
+                        <button class="btn btn-small" style="color: white; background-color: #fa8529;">Salvar</button>
+                </div>
+			
+		  </div>
+		  <!-- <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  </div> -->
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>

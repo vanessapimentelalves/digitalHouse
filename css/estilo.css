@@ -1,0 +1,137 @@
+body
+{
+	font-family: "Roboto";
+	font-size: 170%;
+	color: #0e0e0e;
+}
+
+.wrapper {
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.wrapper {
+	display: flex;
+	align-items: stretch;
+}
+
+#sidebar {
+	min-width: 250px;
+	max-width: 250px;
+	min-height: 100vh;
+	background-color: #0e0e0e;
+	border: #fa8529;
+	border-style: solid;
+	border-width: 0.5px;
+}
+
+li
+{
+	color: white;
+	font-weight: bold;
+	list-style-type: none;
+	padding: 10px 0px 10px 0px;
+}
+
+li a:hover
+{
+	cursor: pointer;
+
+}
+
+li.active a {
+  padding-left: 6px;
+  
+}
+
+li.active div
+{
+	background-color: #fa8529;
+	width: 5px;
+	height: 15px;
+	position: absolute;
+	margin-top: 3px;
+}
+
+#nav{
+	border-bottom: #fa8529;
+	border-bottom-style: solid;
+	border-bottom-width: 0.5px;
+	border-right: #fa8529;
+	border-right-style: solid;
+	border-right-width: 1px;
+}
+
+#nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0e0e0e;
+}
+
+#nav li {
+  float: left;
+}
+
+#nav li a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+#nav img
+{
+	border-radius: 50%;
+	border-color: #fa8529;
+	border-width: 1px;
+	border-style: solid;
+	width: 40px; 
+}
+
+.box
+{
+	margin-bottom: 10px;
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	border: #00335e;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.box-header div
+{
+	background-color: #00335e;
+	color: white;
+	font-weight: bold;
+
+}
+h4{
+	font-size: 20px;
+	font-weight: bold;
+}
+h3{
+	font-size: 25px;
+	color: #00335e ;
+	font-weight: bold;
+	padding: 15px;
+}
+	label{
+	color: #00335e ;
+	font-weight: bold;
+	padding: 15px;
+	}
+	button{
+		color: white;
+		background-color: #fa8529;
+		font-weight: bold;
+	}
+
+	.modal-content div.modal-body select.form-control{
+		height: initial;
+	}
